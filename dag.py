@@ -5,12 +5,12 @@ import datetime as dt
 default_args = {
     'owner': 'airflow',
     'start_date': dt.datetime(2022,10,16),
-    'retries': 30,
-    'retry_delay': dt.timedelta(minutes=3),
+    'retries': 60,
+    'retry_delay': dt.timedelta(minutes=1),
 }
 with DAG('DashPlot',
           default_args=default_args,
-          schedule='0 * * * *', # minutes '0 1 * * *' hours
+          schedule='0 * * * *', # hours '0 1 * * *' hours
           catchup=False
           ) as dag:
 
