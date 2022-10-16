@@ -27,9 +27,9 @@ class DashPlot:
         line = p.line(self.x, self.y, line_color="blue", line_width=1)
         circle = p.circle(self.x, self.y, fill_color=colors, line_color="blue", size=15)
 
-        output_file('index.html')
+        output_file('/Users/admin/pppavlov.github.io/index.html')
 
-        save(p, 'index.html')
+        save(p, '/Users/admin/pppavlov.github.io/index.html')
     
     def update_data(self):
         self.n = self.n + 1
